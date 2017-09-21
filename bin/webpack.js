@@ -162,7 +162,7 @@ if (argv.verbose) {
 if (argv._.includes("init")) {
 	const initPkgs = argv._.length === 1 ? [] : [argv._.pop()];
 
-	return require("../lib/initialize")(initPkgs);
+	return require("../dist/initialize")(initPkgs);
 } else if (argv._.includes("migrate")) {
 	const filePaths = argv._.length === 1 ? [] : [argv._.pop()];
 	if (!filePaths.length) {
@@ -170,7 +170,7 @@ if (argv._.includes("init")) {
 	}
 	const inputConfigPath = path.resolve(process.cwd(), filePaths[0]);
 
-	return require("../lib/migrate.js")(inputConfigPath, inputConfigPath);
+	return require("../dist/migrate.js")(inputConfigPath, inputConfigPath);
 } else {
 	var options = require("./convert-argv")(yargs, argv);
 

@@ -6,11 +6,12 @@ const assert = require('assert');
 // Alternatively, clone webpack-cli and run 'Soren' inside the repo
 
 describe('init', () => {
-	question('Will your application have multiple bundles? (Y/n)', 'n', (answer) => {
+	question(`Will your application have multiple bundles? (Y/n)`, 'n', (answer) => {
 		assert.equal(answer, 'n');
 	});
 
-	question('Which module will be the first to enter the application?', 'app.js', (answer) => {
+	question(`Which module will be the first to enter the application? [example: './src/inde
+	x']`, 'app.js', (answer) => {
 		assert.equal(answer, 'app.js');
 	});
 
