@@ -14,7 +14,8 @@ const NON_COMPILATION_ARGS = [
 	"init",
 	"migrate",
 	"generate-loader",
-	"generate-plugin"
+	"generate-plugin",
+	"serve"
 ];
 
 const NON_COMPILATION_CMD = process.argv.find(arg => {

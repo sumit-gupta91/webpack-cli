@@ -38,7 +38,11 @@ module.exports = function(yargs) {
 				describe: "Generates a new webpack plugin project",
 				group: INIT_GROUP
 			},
-
+			serve: {
+				type: "boolean",
+				describe: "Runs your project on a local server",
+				group: INIT_GROUP
+			},
 			config: {
 				type: "string",
 				describe: "Path to the config file",
